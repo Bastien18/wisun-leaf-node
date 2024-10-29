@@ -1,0 +1,7 @@
+#ifndef __MTS_FRAMEWORK_CONFIG__
+#define __MTS_FRAMEWORK_CONFIG__
+
+#define MTS_FRAMEWORK_MODE_NODE
+//#define MTS_TRANSPORT_MEDIUM_MESH
+
+#endif
