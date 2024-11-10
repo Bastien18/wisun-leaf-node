@@ -1,0 +1,16 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "cwd": "${workspaceFolder}",
+            "executable": "./BUILD/BRD4271A/GCC_ARM-DEBUG/${workspaceFolderBasename}_application.elf",
+            "name": "Debug BRD4271A with JLink",
+            "request": "launch",
+            "type": "cortex-debug",
+            "device": "Cortex-M33",
+            "runToEntryPoint": "main",
+            "showDevDebugOutput": "none",
+            "servertype": "jlink"
+        }
+    ]
+}

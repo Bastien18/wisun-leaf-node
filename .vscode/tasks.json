@@ -1,0 +1,164 @@
+{
+    "version": "2.0.0",
+    "command": "bash",
+    "showOutput": "always",
+    "args": [
+        "-c"
+    ],
+    "tasks": [
+        {
+            "label": "===== BRD4271A =====",
+            "command": ""
+        },
+        {
+            "label": "🔨 Build program (GCC)",
+            "isBuildCommand": true,
+            "args": [
+                "mbed compile --profile=release -m BRD4271A -t GCC_ARM"
+            ]
+        },
+        {
+            "label": "🔨🐞 Build program (GCC debug)",
+            "isBuildCommand": true,
+            "args": [
+                "mbed compile --profile=debug -m BRD4271A -t GCC_ARM"
+            ]
+        },
+        {
+            "label": "🐧🚀 JLINK Flash board (GCC)",
+            "args": [
+                "echo 'reset\r\nhalt\r\nerase 0x08000000 0x081E0000 noreset\r\nloadbin BUILD/BRD4271A/GCC_ARM-RELEASE/${workspaceFolderBasename}.bin,0x08000000\r\nsetpc 0x08000000\r\nreset\r\ngo\r\nexit' > flash.jlink && JLinkExe -device EFR32FG25BXXXF1920 -autoconnect 1 -NoGui 0 -if SWD -Speed 4000 -CommandFile flash.jlink"
+            ]
+        },
+        {
+            "label": "🐧🚀🐞 JLINK Flash board (GCC debug)",
+            "args": [
+                "echo 'reset\r\nhalt\r\nerase 0x08000000 0x081E0000 noreset\r\nloadbin BUILD/BRD4271A/GCC_ARM-DEBUG/${workspaceFolderBasename}.bin,0x08000000\r\nsetpc 0x08000000\r\nreset\r\ngo\r\nexit' > flash.jlink && JLinkExe -device EFR32FG25BXXXF1920 -autoconnect 1 -NoGui 0 -if SWD -Speed 4000 -CommandFile flash.jlink"
+            ]
+        },
+        {
+            "label": "===== BUILD BETECH =====",
+            "command": ""
+        },
+        {
+            "label": "🔨 Build program (GCC)",
+            "args": [
+                "mbed compile --profile=release -m BETECH -t GCC_ARM"
+            ]
+        },
+        {
+            "label": "🔨🐞 Build program (GCC debug)",
+            "args": [
+                "mbed compile --profile=debug -m BETECH -t GCC_ARM"
+            ]
+        },
+        {
+            "label": "🐧🚀 JLINK Flash board (GCC)",
+            "args": [
+                "echo 'reset\r\nhalt\r\nerase 0x08000000 0x081E0000 noreset\r\nloadbin BUILD/BETECH/GCC_ARM-RELEASE/${workspaceFolderBasename}.bin,0x08000000\r\nsetpc 0x08000000\r\nreset\r\ngo\r\nexit' > flash.jlink && JLinkExe -device EFR32FG25BXXXF1920 -autoconnect 1 -NoGui 0 -if SWD -Speed 4000 -CommandFile flash.jlink"
+            ]
+        },
+        {
+            "label": "🐧🚀🐞 JLINK Flash board (GCC debug)",
+            "args": [
+                "echo 'reset\r\nhalt\r\nerase 0x08000000 0x081E0000 noreset\r\nloadbin BUILD/BETECH/GCC_ARM-DEBUG/${workspaceFolderBasename}.bin,0x08000000\r\nsetpc 0x08000000\r\nreset\r\ngo\r\nexit' > flash.jlink && JLinkExe -device EFR32FG25BXXXF1920 -autoconnect 1 -NoGui 0 -if SWD -Speed 4000 -CommandFile flash.jlink"
+            ]
+        },
+        {
+            "label": "===== BUILD CALEC =====",
+            "command": ""
+        },
+        {
+            "label": "🔨 Build program (GCC)",
+            "args": [
+                "mbed compile --profile=release -m CALEC -t GCC_ARM"
+            ]
+        },
+        {
+            "label": "🔨🐞 Build program (GCC debug)",
+            "args": [
+                "mbed compile --profile=debug -m CALEC -t GCC_ARM"
+            ]
+        },
+        {
+            "label": "🐧🚀 JLINK Flash board (GCC)",
+            "args": [
+                "echo 'reset\r\nhalt\r\nerase 0x08000000 0x081E0000 noreset\r\nloadbin BUILD/CALEC/GCC_ARM-RELEASE/${workspaceFolderBasename}.bin,0x08000000\r\nsetpc 0x08000000\r\nreset\r\ngo\r\nexit' > flash.jlink && JLinkExe -device EFR32FG25BXXXF1920 -autoconnect 1 -NoGui 0 -if SWD -Speed 4000 -CommandFile flash.jlink"
+            ]
+        },
+        {
+            "label": "🐧🚀🐞 JLINK Flash board (GCC debug)",
+            "args": [
+                "echo 'reset\r\nhalt\r\nerase 0x08000000 0x081E0000 noreset\r\nloadbin BUILD/CALEC/GCC_ARM-DEBUG/${workspaceFolderBasename}.bin,0x08000000\r\nsetpc 0x08000000\r\nreset\r\ngo\r\nexit' > flash.jlink && JLinkExe -device EFR32FG25BXXXF1920 -autoconnect 1 -NoGui 0 -if SWD -Speed 4000 -CommandFile flash.jlink"
+            ]
+        },
+        {
+            "label": "===== BUILD STRX_MB_V1 =====",
+            "command": ""
+        },
+        {
+            "label": "🔨 Build program (GCC)",
+            "args": [
+                "mbed compile --profile=release -m STRX_MB_V1 -t GCC_ARM"
+            ]
+        },
+        {
+            "label": "🔨🐞 Build program (GCC debug)",
+            "args": [
+                "mbed compile --profile=debug -m STRX_MB_V1 -t GCC_ARM"
+            ]
+        },
+        {
+            "label": "🐧🚀 JLINK Flash board (GCC)",
+            "args": [
+                "echo 'reset\r\nhalt\r\nerase 0x08000000 0x081E0000 noreset\r\nloadbin BUILD/STRX_MB_V1/GCC_ARM-RELEASE/${workspaceFolderBasename}.bin,0x08000000\r\nsetpc 0x08000000\r\nreset\r\ngo\r\nexit' > flash.jlink && JLinkExe -device EFR32FG25BXXXF1920 -autoconnect 1 -NoGui 0 -if SWD -Speed 4000 -CommandFile flash.jlink"
+            ]
+        },
+        {
+            "label": "🐧🚀🐞 JLINK Flash board (GCC debug)",
+            "args": [
+                "echo 'reset\r\nhalt\r\nerase 0x08000000 0x081E0000 noreset\r\nloadbin BUILD/STRX_MB_V1/GCC_ARM-DEBUG/${workspaceFolderBasename}.bin,0x08000000\r\nsetpc 0x08000000\r\nreset\r\ngo\r\nexit' > flash.jlink && JLinkExe -device EFR32FG25BXXXF1920 -autoconnect 1 -NoGui 0 -if SWD -Speed 4000 -CommandFile flash.jlink"
+            ]
+        },
+        {
+            "label": "===== Misc. =====",
+            "command": ""
+        },
+        {
+            "label": "⚙️ Show config EFR32",
+            "args": [
+                "mbed compile -m EFR32FG25B222F1920IM56_BOARD -t GCC_ARM --config"
+            ]
+        },
+        {
+            "label": "⚙️ Recover EFR32",
+            "command": "/home/yann/Downloads/SimplicityStudio-5(1)/SimplicityStudio_v5/developer/adapter_packs/commander/commander",
+            "args": [
+                "device",
+                "recover",
+                "-d",
+                "efr32fg25b222f1920im56"
+            ]
+        },
+        {
+            "label": "build",
+            "args": [
+                "mbed compile --profile=${input:profile} -m ${input:boardName} -t GCC_ARM"
+            ]
+        }
+    ],
+    "inputs": [
+        {
+            "id": "profile",
+            "type": "command",
+            "command": "cpptools.activeConfigCustomVariable",
+            "args": "profile"
+        },
+        {
+            "id": "boardName",
+            "type": "command",
+            "command": "cpptools.activeConfigCustomVariable",
+            "args": "boardName"
+        }
+    ]
+}

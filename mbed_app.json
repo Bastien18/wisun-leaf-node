@@ -1,7 +1,7 @@
 {
     "config": {
-        "enable-led-control-example": true,
         "LED": "NC",
+        "BUTTON": "NC",
         "BUTTON_1": "NC",
         "BUTTON_2": "NC",
         "RELAY_CONTROL": "NC",
@@ -12,12 +12,12 @@
         },
         "debug-trace": "true"
     },
-    "macros": ["MBEDTLS_USER_CONFIG_FILE=\"mbedtls_wisun_config.h\"", "MBED_TICKLESS", "MBED_CONF_TARGET_TICKLESS_FROM_US_TICKER=1"],
+    "macros": ["MBEDTLS_USER_CONFIG_FILE=\"mbedtls_wisun_config.h\"", "MBED_TICKLESS", "MBED_CONF_TARGET_TICKLESS_FROM_US_TICKER=0"],
     "target_overrides": {
         "*": {
             "nsapi.default-mesh-type": "WISUN",
-            "mbed-mesh-api.wisun-network-name": "\"Wi-SUN CALEC lab\"",
-            "nanostack.configuration": "ws_border_router",
+            "mbed-mesh-api.wisun-network-name": "\"Wi-SUN Network\"",
+            "nanostack.configuration": "ws_router",
             "mbed-mesh-api.certificate-header": "\"wisun_certificates.h\"",
             "mbed-mesh-api.root-certificate": "WISUN_ROOT_CERTIFICATE",
             "mbed-mesh-api.own-certificate": "WISUN_CLIENT_CERTIFICATE",
@@ -27,7 +27,15 @@
             "platform.stdio-convert-newlines": false,
             "platform.stdio-baud-rate": 115200,
             "platform.stdio-buffered-serial": false,
-            "target.device_has_add": ["802_15_4_PHY"]
+            "target.device_has_add": ["802_15_4_PHY"],
+            "mbed-mesh-api.wisun-uc-channel-function": "0xff",
+            "mbed-mesh-api.wisun-bc-channel-function": "0xff",
+            "mbed-mesh-api.wisun-uc-fixed-channel": 0,
+            "mbed-mesh-api.wisun-bc-fixed-channel": 0,
+            "mbed-mesh-api.wisun-regulatory-domain": 3,
+            "mbed-mesh-api.wisun-operating-class": 2,
+            "mbed-mesh-api.wisun-operating-mode": 3,
+            "mbed-mesh-api.wisun-network-size": 1
         },
         "BETECH": {
             "target.network-default-interface-type": "MESH",

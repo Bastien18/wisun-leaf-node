@@ -1,0 +1,38 @@
+{
+    "env": {
+        "GCC_PATH": "${userHome}/mbed-dev-env/gcc-arm-none-eabi/bin/arm-none-eabi-gcc/arm-none-eabi-g++"
+    },
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/mbed-os/*",
+                "${workspaceFolder}/mbed-os/connectivity/**",
+                "${workspaceFolder}/mbed-os/drivers/**",
+                "${workspaceFolder}/mbed-os/events/**",
+                "${workspaceFolder}/mbed-os/platform/**",
+                "${workspaceFolder}/mbed-os/rtos/**",
+                "${workspaceFolder}/mbed-os/storage/**",
+                "${workspaceFolder}/mbed-os/targets/**",
+                "${workspaceFolder}/mbed-os/cmsis/CMSIS_5/CMSIS/RTOS2/Include",
+                "${workspaceFolder}/calec_sources/**"
+            ],
+            "defines": [
+                "MBED_CONF_RTOS_PRESENT=1",
+                "MBED_CONF_RTOS_API_PRESENT=1",
+                "MBED_CONF_NSAPI_PRESENT=1",
+                "MBED_CONF_EVENTS_PRESENT=1",
+                "MBED_CONF_FILESYSTEM_PRESENT=1",
+                "DEVICE_SPI=1",
+                "DEVICE_SPI_ASYNCH=1",
+                "DEVICE_SERIAL=1",
+                "DEVICE_SERIAL_ASYNC=1",
+                "DEVICE_INTERRUPTIN=1",
+                "DEVICE_SLEEP=1"
+            ],
+            "cStandard": "c11",
+            "cppStandard": "gnu++14"
+        }
+    ],
+    "version": 4
+}

@@ -1,7 +1,7 @@
 reset
 halt
 erase 0x08000000 0x081E0000 noreset
-loadbin BUILD/BRD4271A/GCC_ARM-DEBUG/wisun-node.bin,0x08000000
+loadbin BUILD/BRD4271A/GCC_ARM-RELEASE/wisun-leaf-node.bin,0x08000000
 setpc 0x08000000
 reset
 go
